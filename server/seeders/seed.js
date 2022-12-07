@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User, Thought } = require('../models');
+const { User, Product, Review, Vendor } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const thoughtSeeds = require('./thoughtSeeds.json');
 

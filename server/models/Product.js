@@ -31,11 +31,12 @@ const productSchema = new Schema({
     required: true,
     trim: true,
   },
-  vendor: {
-    type: String,
-    required: true,
-    trim: true,
-  },
+  vendor: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Vendor',
+    }
+  ],
   reviews: [
     {
       type: Schema.Types.ObjectId,
