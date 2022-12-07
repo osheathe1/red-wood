@@ -35,6 +35,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     products: [Product]!
+  }
 
   type Auth {
     token: ID!
