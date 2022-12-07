@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Apple",
+    "description": "An apple",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/1200px-Red_Apple.jpg",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Banana",
+    "description": "A banana",
+    "price": "5",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Orange",
+    "description": "An orange",
+    "price": "7",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Citrus_sinensis_-_Fruit_-_Orange.jpg/1200px-Citrus_sinensis_-_Fruit_-_Orange.jpg",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Pear",
+    "description": "A pear",
+    "price": "8",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Citrus_sinensis_-_Fruit_-_Orange.jpg/1200px-Citrus_sinensis_-_Fruit_-_Orange.jpg",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Strawberry",
+    "description": "A strawberry",
+    "price": "6",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Watermelon",
+    "description": "A watermelon",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Pineapple",
+    "description": "A pineapple",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Grape",
+    "description": "A grape",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Kiwi",
+    "description": "A kiwi",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Lemon",
+    "description": "A lemon",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    "quantityInStock": "10"
+  },
+  {
+    "name": "Mango",
+    "description": "A mango",
+    "price": "10",
+    "category": "Fruit",
+    "vendor": "HEB",
+    "image": "",
+    
+  }
+]
