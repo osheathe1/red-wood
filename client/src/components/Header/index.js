@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../../assets/images/redwood-logo.png'
+
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -9,13 +11,13 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="custom-bg-color text-light mb-4 py-3 flex-column justify-center align-center custom-header">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Tech Thoughts</h1>
+            <img src={logo} alt='redwood-logo' className="m-0 custom-title"></img>
           </Link>
-          <p className="m-0">Get into the mind of a programmer.</p>
+          {/* <p className="m-0 custom-sub-title">Biggest wood in town!</p> */}
         </div>
         <div>
           {Auth.loggedIn() ? (
@@ -39,6 +41,7 @@ const Header = () => {
           )}
         </div>
       </div>
+      <div className='guiding-arrow'><span>&#8595;</span></div>
     </header>
   );
 };
