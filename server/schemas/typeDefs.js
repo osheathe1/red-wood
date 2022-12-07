@@ -6,23 +6,34 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    thoughts: [Thought]!
+    reviews: [Review]!
   }
 
-  type Thought {
+  type Product {
     _id: ID
-    thoughtText: String
-    thoughtAuthor: String
+    name: String
+    description: String
+    price: Float
+    category: String
+    quantityInStock: Int
+    image: String
+    vendor: String
+    reviews: [Review]!
     createdAt: String
-    comments: [Comment]!
   }
 
-  type Comment {
+  type Review {
     _id: ID
-    commentText: String
-    commentAuthor: String
+    text: String
+    username: String
+    stars: Int
     createdAt: String
   }
+
+  type Vendor {
+    _id: ID
+    name: String
+    products: [Product]!
 
   type Auth {
     token: ID!
