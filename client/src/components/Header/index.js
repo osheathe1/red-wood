@@ -12,7 +12,7 @@ const Header = () => {
   };
   return (
     <header className="custom-bg-color text-light mb-4 py-3 flex-column justify-center align-center custom-header">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+      <div className="container flex-row justify-center align-center">
         <div>
           <Link className="text-light" to="/">
             <img src={logo} alt='redwood-logo' className="m-0 custom-title"></img>
