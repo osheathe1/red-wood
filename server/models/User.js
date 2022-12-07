@@ -19,12 +19,18 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  thoughts: [
+  reviews: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Thought',
+      ref: 'Review',
     },
   ],
+  favorites: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Product',
+    }
+  ]
 });
 
 userSchema.pre('save', async function (next) {
