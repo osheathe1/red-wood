@@ -1,101 +1,155 @@
 [
   {
-    "name": "Apple",
-    "description": "An apple",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/1200px-Red_Apple.jpg",
-    "quantityInStock": "10"
-  },
-  {
-    "name": "Banana",
-    "description": "A banana",
-    "price": "5",
-    "category": "Fruit",
-    "vendor": "HEB",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg",
-    "quantityInStock": "10"
-  },
-  {
-    "name": "Orange",
-    "description": "An orange",
-    "price": "7",
-    "category": "Fruit",
-    "vendor": "HEB",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Citrus_sinensis_-_Fruit_-_Orange.jpg/1200px-Citrus_sinensis_-_Fruit_-_Orange.jpg",
-    "quantityInStock": "10"
-  },
-  {
-    "name": "Pear",
-    "description": "A pear",
-    "price": "8",
-    "category": "Fruit",
-    "vendor": "HEB",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Citrus_sinensis_-_Fruit_-_Orange.jpg/1200px-Citrus_sinensis_-_Fruit_-_Orange.jpg",
-    "quantityInStock": "10"
-  },
-  {
-    "name": "Strawberry",
-    "description": "A strawberry",
-    "price": "6",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "In-Action Man: Frost Fist",
+    "description": "",
+    "price": 14.99,
+    "category": "Toys",
+    "vendor": "JustCoolThings",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 880
   },
   {
-    "name": "Watermelon",
-    "description": "A watermelon",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "Darbie Dream Home",
+    "description": "",
+    "price": 139.99,
+    "category": "Toys",
+    "vendor": "Funiverse",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 100
   },
   {
-    "name": "Pineapple",
-    "description": "A pineapple",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "Afterburner Car Set",
+    "description": "",
+    "price": 12.99,
+    "category": "Toys",
+    "vendor": "JustCoolThings",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 600
   },
   {
-    "name": "Grape",
-    "description": "A grape",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "Darbie: I can be a Garbagewoman!",
+    "description": "",
+    "price": 7.99,
+    "category": "Toys",
+    "vendor": "Funiverse",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 450
   },
   {
-    "name": "Kiwi",
-    "description": "A kiwi",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "Glactatron Defenders 4-Pack",
+    "description": "",
+    "price": 19.99,
+    "category": "Toys",
+    "vendor": "JustCoolThings",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 260
   },
   {
-    "name": "Lemon",
-    "description": "A lemon",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "SpyFiction: The Espionage Boardgame",
+    "description": "",
+    "price": 21.99,
+    "category": "Toys",
+    "vendor": "Gameprism",
     "image": "",
-    "quantityInStock": "10"
+    "quantityInStock": 250
   },
   {
-    "name": "Mango",
-    "description": "A mango",
-    "price": "10",
-    "category": "Fruit",
-    "vendor": "HEB",
+    "name": "Realmslayers TCG: Starter Pack",
+    "description": "",
+    "price": 25.99,
+    "category": "Toys",
+    "vendor": "Gameprism",
     "image": "",
-    
+    "quantityInStock": 600
+  },
+  {
+    "name": "Snail Garden: Tending the Land",
+    "description": "",
+    "price": 49.99,
+    "category": "Toys",
+    "vendor": "Gameprism",
+    "image": "",
+    "quantityInStock": 850
+  },
+  {
+    "name": "2020 Silver 800",
+    "description": "",
+    "price": 67000,
+    "category": "Cars",
+    "vendor": "Drivester",
+    "image": "",
+    "quantityInStock": 18
+  },
+  {
+    "name": "Dynamo Off Road",
+    "description": "",
+    "price": 69500,
+    "category": "Cars",
+    "vendor": "Drivester",
+    "image": "",
+    "quantityInStock": 13
+  },
+  {
+    "name": "2013 Blaze",
+    "description": "",
+    "price": 49550,
+    "category": "Cars",
+    "vendor": "Drivester",
+    "image": "",
+    "quantityInStock": 30
+  },
+  {
+    "name": "2019 Prodigy Sport",
+    "description": "",
+    "price": 69550,
+    "category": "Cars",
+    "vendor": "LuxWheels",
+    "image": "",
+    "quantityInStock": 30
+  },
+  {
+    "name": "Dynamique Lux",
+    "description": "",
+    "price": 95200,
+    "category": "Cars",
+    "vendor": "LuxWheels",
+    "image": "",
+    "quantityInStock": 20
+  },
+  {
+    "name": "2023 Climax",
+    "description": "",
+    "price": 100210,
+    "category": "Cars",
+    "vendor": "LuxWheels",
+    "image": "",
+    "quantityInStock": 3
+  },
+  {
+    "name": "2023 Electrocrush",
+    "description": "",
+    "price": 96100,
+    "category": "Cars",
+    "vendor": "Monsterzilla",
+    "image": "",
+    "quantityInStock": 12
+  },
+  {
+    "name": "2018 Kahuna",
+    "description": "",
+    "price": 74000,
+    "category": "Cars",
+    "vendor": "Monsterzilla",
+    "image": "",
+    "quantityInStock": 10
+  },
+  {
+    "name": "2018 700 Z-LX",
+    "description": "",
+    "price": 86000,
+    "category": "Cars",
+    "vendor": "Monsterzilla",
+    "image": "",
+    "quantityInStock": 30
   }
 ]
