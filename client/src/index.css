@@ -351,6 +351,7 @@ END NORMALIZE CSS
 html,
 body {
   min-height: 100%;
+  color: #fff;
 }
 
 body {
@@ -920,7 +921,7 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #1a1a1a;
+  background-color: #70463d;
 }
 
 .bg-info {
@@ -1030,12 +1031,12 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #70463d;
   color: #ffffff;
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: #f05b39;
 }
 
 .btn.btn-light {
@@ -1168,10 +1169,7 @@ label form [type='radio'] {
 }
 
 .container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .container.container-fluid {
@@ -1333,11 +1331,13 @@ label form [type='radio'] {
 
 .custom-header {
   min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-title {
-  /* font-size: 150px; */
-
   background-color: #ccc;
   border-radius: 300px;
 }
@@ -1356,13 +1356,46 @@ label form [type='radio'] {
 .guiding-arrow {
   display: block;
   z-index: 9999;
-  color: #1bbc9b;
+  color: #ff0000;
   font-size: 100px;
   font-weight: 500;
   position: absolute;
   bottom: 0;
   animation: jumpInfinite 1.5s infinite;
-  margin-top: 20px;
+  animation-delay: 5s;
+}
+
+.custom-list-container {
+  width: 100%;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+}
+
+.category-card {
+  background-color: rgba(112, 70, 61, 0.7);
+  width: 45%;
+  min-height: 50vh;
+  color: #fff;
+  /* border: solid; */
+  border-radius: 20px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  /* margin-top: 10px; */
+}
+
+.category-title {
+  font-size: 40px;
 }
 
 @keyframes jumpInfinite {
@@ -1514,15 +1547,13 @@ label form [type='radio'] {
     max-width: 75%;
   }
   .col-md-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
+    max-width: 100%;
   }
   .col-md-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
   .col-md-12 {
-    flex: 0 0 100%;
     max-width: 100%;
   }
   .justify-space-between-md {
