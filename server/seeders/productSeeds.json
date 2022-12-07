@@ -147,9 +147,36 @@
     "name": "2018 700 Z-LX",
     "description": "",
     "price": 86000,
-    "category": "Cars",
-    "vendor": "Monsterzilla",
     "image": "",
     "quantityInStock": 30
+  },
+  {
+    "name": "Glistening Glow Lip Balm Set",
+    "description": "",
+    "price": 9.99,
+    "image": "",
+    "quantityInStock": 600
+  },
+  {
+    "name": "Coconut Cream Concealer Pen",
+    "description": "",
+    "price": 6.50,
+    "image": "",
+    "quantityInStock": 550
+  },
+  {
+    "name": "Paris Lights: All-in-One Makup Set",
+    "description": "",
+    "price": 29.99,
+    "image": "",
+    "quantityInStock": 1400
+  },
+  {
+    "name": "FEARCE By Shania Wu: Eyeshadow Palette",
+    "description": "",
+    "price": 9.99,
+    "image": "",
+    "quantityInStock": 1800
   }
+  
 ]

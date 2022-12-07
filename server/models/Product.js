@@ -16,11 +16,12 @@ const productSchema = new Schema({
     required: true,
     min: 0.01,
   },
-  category: {
-    type: String,
-    required: true,
-    trim: true,
-  },
+  category: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Category',
+    },
+  ],
   quantityInStock: {
     type: Number,
     required: true,

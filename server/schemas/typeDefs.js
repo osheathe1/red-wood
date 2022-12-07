@@ -15,10 +15,10 @@ const typeDefs = gql`
     name: String
     description: String
     price: Float
-    category: String
+    category: [Category]!
     quantityInStock: Int
     image: String
-    vendor: String
+    vendor: [Vendor]!
     reviews: [Review]!
     createdAt: String
   }
@@ -29,6 +29,11 @@ const typeDefs = gql`
     username: String
     stars: Int
     createdAt: String
+  }
+
+  type Category {
+    _id: ID
+    text: String
   }
 
   type Vendor {
