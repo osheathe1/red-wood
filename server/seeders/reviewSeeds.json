@@ -1,0 +1,52 @@
+[
+  {
+    "text": "This is a great product!",
+    "username": "Brian Kernighan",
+    "stars": 5
+  },
+  {
+    "text": "Wow, life changing!",
+    "username": "Max Kanat-Alexander",
+    "stars": 5
+  },
+  {
+    "text": "I can't remember my life without it",
+    "username": "Why The Lucky Stiff",
+    "stars": 5
+  },
+  {
+    "text": "It was ok",
+    "username": "Kent Beck",
+    "stars": 3
+  },
+  {
+    "text": "I don't like it",
+    "username": "Edward V. Berard",
+    "stars": 1
+  },
+  {
+    "text": "Amazing product and great customer service!",
+    "username": "Alan Kay",
+    "stars": 5
+  },
+  {
+    "text": "This product ruined my life.",
+    "username": "C.A.R. Hoare",
+    "stars": 1
+  },
+  {
+    "text": "It was alright, not what I expected",
+    "username": "David Thomas",
+    "stars": 3
+  },
+  {
+    "text": "My wife loves it!",
+    "username": "Donald Knuth",
+    "stars": 5
+  },
+  {
+    "text": "I learned a lot from this product",
+    "username": "Lernantino",
+    "stars": 5
+  }
+]
