@@ -25,6 +25,7 @@ const typeDefs = gql`
 
   type Review {
     _id: ID
+    productId: [Product]!
     text: String
     username: String
     stars: Int

@@ -19,6 +19,10 @@ const reviewSchema = new Schema({
     min: 1,
     max: 5,
   },
+  product: {
+    type: Schema.Types.ObjectId,
+    ref: 'Product',
+  },
   createdAt: {
     type: Date,
     default: Date.now,
