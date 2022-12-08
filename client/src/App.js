@@ -11,10 +11,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Product } from './components/Product';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -69,8 +69,8 @@ function App() {
                 element={<Profile />}
               />
               <Route 
-                path="/thoughts/:thoughtId" 
-                element={<SingleThought />}
+                path="/product/:productId" 
+                element={<Product />}
               />
             </Routes>
           </div>
