@@ -1,25 +1,31 @@
 const db = require('../config/connection');
 const { User, Product, Review, Vendor } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const productSeeds = require('./productSeeds.json');
+const vendorSeeds = require('./vendorSeeds.json')
 
 db.once('open', async () => {
   try {
     await User.deleteMany({});
+    await Vendor.deleteMany({});
+    await Product.deleteMany({});
+    await Review.deleteMany({});
 
     await User.create(userSeeds);
+    await Vendor.create(vendorSeeds);
+    await Product.create(productSeeds);
 
-    for (let i = 0; i < thoughtSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
-        {
-          $addToSet: {
-            thoughts: _id,
-          },
-        }
-      );
-    }
+    // populate vendor with associated products
+    const products = await Product.find({});
+      for(let i =0; i < products.length; i++) {
+
+        const { _id, vendor } = products[i];
+        const vendorName = await Vendor.findOneAndUpdate(
+          { name: vendor },
+          { $addToSet: {products: _id,} }
+        ).populate('products');
+      }
+
   } catch (err) {
     console.error(err);
     process.exit(1);

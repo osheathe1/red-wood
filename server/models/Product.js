@@ -8,7 +8,7 @@ const productSchema = new Schema({
   },
   description: {
     type: String,
-    required: true,
+    // required: true,
     trim: true,
   },
   price: {
@@ -29,15 +29,14 @@ const productSchema = new Schema({
   },
   image: {
     type: String, // URL of the image?
+    // required: true,
+    trim: true,
+  },
+  vendor: {
+    type: String,
     required: true,
     trim: true,
   },
-  vendor: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Vendor',
-    }
-  ],
   reviews: [
     {
       type: Schema.Types.ObjectId,
