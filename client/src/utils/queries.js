@@ -104,4 +104,5 @@ export const QUERY_GET_IMAGE = gql
       image
     }
   }
-}`
+}
+`;
