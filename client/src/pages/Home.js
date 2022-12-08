@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import Header from '../components/Header';
 import { CategoryList } from '../components/CategoryList';
 import { HeroCard } from '../components/HeroCard';
-
+import Cart from "../components/Cart";
 import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Home = () => {
