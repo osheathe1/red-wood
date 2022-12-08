@@ -3,6 +3,7 @@ const { User, Product, Review, Vendor } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const productSeeds = require('./productSeeds.json');
 const vendorSeeds = require('./vendorSeeds.json')
+const reviewSeeds = require('./reviewSeeds.json');
 
 db.once('open', async () => {
   try {
@@ -14,6 +15,7 @@ db.once('open', async () => {
     await User.create(userSeeds);
     await Vendor.create(vendorSeeds);
     await Product.create(productSeeds);
+    await Review.create(reviewSeeds);
 
     // populate vendor with associated products
     const products = await Product.find({});
@@ -25,6 +27,24 @@ db.once('open', async () => {
           { $addToSet: {products: _id,} }
         ).populate('products');
       }
+
+    // assign review to random product and populate user with associated reviews
+    const reviews = await Review.find({});
+      for(let i =0; i < reviews.length; i++) {
+        
+        const { _id, username } = reviews[i];
+        const randomProduct = await Product.aggregate([{ $sample: { size: 1 } }]);
+        const productId = randomProduct[0]._id;
+        const product = await Product.findOneAndUpdate(
+          { _id: productId },
+          { $addToSet: { reviews: _id } }
+        ).populate('reviews');
+        const user = await User.findOneAndUpdate(
+          { username: username },
+          { $addToSet: { reviews: _id } }
+        ).populate('reviews');
+      }
+ 
 
   } catch (err) {
     console.error(err);
