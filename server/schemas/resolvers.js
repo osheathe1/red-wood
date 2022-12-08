@@ -142,6 +142,19 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
+    // add new vendor
+
+    // add product to vendor
+    vendorProductAdd: async (parent, { vendorId, productId }) => {
+      const updatedVendor = await Vendor.findOneAndUpdate( 
+        { _id: vendorId },
+        { $addToSet: { products: productId } },
+        { new: true }
+      ).populate('products');
+
+      return updatedVendor;
+    }
+
 
   },
 };

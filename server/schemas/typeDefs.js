@@ -61,6 +61,7 @@ const typeDefs = gql`
     addVendor(name: String!): Vendor
     addFavorite(productId: ID!): User
     removeFavorite(productId: ID!): User
+    vendorProductAdd(productId: ID!, vendorId: ID!): Vendor
   }
 `;
 
