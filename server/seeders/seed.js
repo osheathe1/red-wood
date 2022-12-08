@@ -7,27 +7,24 @@ const vendorSeeds = require('./vendorSeeds.json')
 db.once('open', async () => {
   try {
     await User.deleteMany({});
-    await Product.deleteMany({});
     await Vendor.deleteMany({});
+    await Product.deleteMany({});
     await Review.deleteMany({});
 
     await User.create(userSeeds);
     await Vendor.create(vendorSeeds);
     await Product.create(productSeeds);
 
-    // iterate through productSeeds and add to Vendor products array -- this is not working
-    for (let i = 0; i < productSeeds.length; i++) {
-      const { _id, vendorName } = await Product.create(productSeeds[i]);
-      const vendor = await Vendor.findOneAndUpdate(
-        { name: vendorName },
-        {
-          $addToSet: {
-            products: _id,
-          },
-        }
-      );
-    }
+    // populate vendor with associated products
+    const products = await Product.find({});
+      for(let i =0; i < products.length; i++) {
 
+        const { _id, vendor } = products[i];
+        const vendorName = await Vendor.findOneAndUpdate(
+          { name: vendor },
+          { $addToSet: {products: _id,} }
+        ).populate('products');
+      }
 
   } catch (err) {
     console.error(err);
