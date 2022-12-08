@@ -1,13 +1,4 @@
-:root {
-  --brown: #702b1b;
-  --lightRedwood: #f29783;
-  --medRedwood: #f05b39;
-  --grayBrown: #70463d;
-  --darkRedwood: #bd482d;
-  --whiteGray: #eee;
-  --lightGray: #aaa;
-  --medGray: #888;
-}
+@import './css-variables.css';
 
 .product-container {
   display: flex;
@@ -162,4 +153,19 @@
 .single-btn:hover {
   background-color: var(--medRedwood);
   content: "Sure!";
+}
+
+@media screen and (max-width: 820px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .left-sidebar {
+    border-right: none;
+    border-bottom: 3px solid var(--lightGray);
+  }
+
+  .right-side {
+
+  }
 }

@@ -28,7 +28,7 @@ export const Product = (props) => {
         <div className='left-sidebar'>
           <p className='product-title'>White Tee</p>
           <p id='vendor'>Gucci</p>
-          <img className='product-image' src='https://cdn.discordapp.com/attachments/1047988391440027748/1050143955746041916/white_tshirt.jpg' alt='white-tee'></img>
+          {/* <img className='product-image' src='https://cdn.discordapp.com/attachments/1047988391440027748/1050143955746041916/white_tshirt.jpg' alt='white-tee'></img> */}
         </div>
         <div className='right-side'>
           <p id="product-description">This white tee is EXTRA wide. It's so big that it has all the necessary things a human being needs to live. Comes fully furnished with mahogany cabinets, dining table, couches and much more. This white tee is listed as a 3 bedroom 2 bath which means its big enough to fit a small family. Order one today!</p>
