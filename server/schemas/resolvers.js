@@ -20,7 +20,9 @@ const resolvers = {
     },
 
     // get products by category
-
+    productsByCategory: async (parent, { category }) => {
+      return Product.find({ category }).populate('reviews');
+    },
 
     // get all vendors
     vendors: async () => {

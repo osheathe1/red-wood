@@ -49,6 +49,7 @@ const typeDefs = gql`
     product(productId: ID!): Product
     vendors: [Vendor]
     vendor(vendorId: ID!): Vendor
+    productsByCategory(category: String!): [Product]
     me: User
   }
 
