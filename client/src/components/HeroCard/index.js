@@ -5,7 +5,7 @@ export const HeroCard = () => {
   return (
     <div className='hero-card-container'>
       <p className='hero-card-title'>White Tee</p>
-      <a className='hero-card-link' href='/' alt='hero-link'>Buy Now!</a>
+      <a className='hero-card-link' href='/product/white-tee' alt='hero-link'>Buy Now!</a>
     </div>
   )
 }
