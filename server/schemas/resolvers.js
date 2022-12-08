@@ -20,7 +20,9 @@ const resolvers = {
     },
 
     // get products by category
-
+    productsByCategory: async (parent, { category }) => {
+      return Product.find({ category }).populate('reviews');
+    },
 
     // get all vendors
     vendors: async () => {
@@ -141,6 +143,19 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    // add new vendor
+
+    // add product to vendor
+    vendorProductAdd: async (parent, { vendorId, productId }) => {
+      const updatedVendor = await Vendor.findOneAndUpdate( 
+        { _id: vendorId },
+        { $addToSet: { products: productId } },
+        { new: true }
+      ).populate('products');
+
+      return updatedVendor;
+    }
 
 
   },

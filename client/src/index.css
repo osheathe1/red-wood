@@ -1379,10 +1379,11 @@ label form [type='radio'] {
 
 .category-card {
   background-color: rgba(112, 70, 61, 0.7);
+  background-repeat: none;
+  background-size: cover;
   width: 45%;
   min-height: 50vh;
   color: #fff;
-  /* border: solid; */
   border-radius: 20px;
   height: 200px;
   text-align: center;
@@ -1391,11 +1392,33 @@ label form [type='radio'] {
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;
-  /* margin-top: 10px; */
+  box-shadow: 10px 10px 20px #5f5f5f;
 }
 
 .category-title {
   font-size: 40px;
+  background-color: rgba(204, 204, 204, 0.8);
+  border-radius: 10px;
+  padding: 10px 30px;
+
+}
+
+.hero-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-image: url(https://cdn.discordapp.com/attachments/1047988391440027748/1050143955746041916/white_tshirt.jpg);
+  background-repeat: none;
+  background-size: cover;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 20px #5f5f5f;
+}
+
+.hero-card-title {
+  font-size: 50px;
 }
 
 @keyframes jumpInfinite {

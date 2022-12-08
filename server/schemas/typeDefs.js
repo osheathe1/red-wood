@@ -25,6 +25,7 @@ const typeDefs = gql`
 
   type Review {
     _id: ID
+    productId: [Product]!
     text: String
     username: String
     stars: Int
@@ -49,6 +50,7 @@ const typeDefs = gql`
     product(productId: ID!): Product
     vendors: [Vendor]
     vendor(vendorId: ID!): Vendor
+    productsByCategory(category: String!): [Product]
     me: User
   }
 
@@ -61,6 +63,7 @@ const typeDefs = gql`
     addVendor(name: String!): Vendor
     addFavorite(productId: ID!): User
     removeFavorite(productId: ID!): User
+    vendorProductAdd(productId: ID!, vendorId: ID!): Vendor
   }
 `;
 
