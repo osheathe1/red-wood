@@ -146,6 +146,8 @@
   {
     "name": "2018 700 Z-LX",
     "description": "",
+    "category": "Cars",
+    "vendor": "Monsterzilla",
     "price": 86000,
     "image": "",
     "quantityInStock": 30
@@ -153,6 +155,8 @@
   {
     "name": "Glistening Glow Lip Balm Set",
     "description": "",
+    "category": "Beauty",
+    "vendor": "Delilah Beauty",
     "price": 9.99,
     "image": "",
     "quantityInStock": 600
@@ -160,6 +164,8 @@
   {
     "name": "Coconut Cream Concealer Pen",
     "description": "",
+    "category": "Beauty",
+    "vendor": "Delilah Beauty",
     "price": 6.50,
     "image": "",
     "quantityInStock": 550
@@ -167,6 +173,8 @@
   {
     "name": "Paris Lights: All-in-One Makup Set",
     "description": "",
+    "category": "Beauty",
+    "vendor": "Delilah Beauty",
     "price": 29.99,
     "image": "",
     "quantityInStock": 1400
@@ -174,6 +182,8 @@
   {
     "name": "FEARCE By Shania Wu: Eyeshadow Palette",
     "description": "",
+    "category": "Beauty",
+    "vendor": "Catwalk Ready",
     "price": 9.99,
     "image": "",
     "quantityInStock": 1800
