@@ -5,7 +5,7 @@
     "price": 14.99,
     "category": "Toys",
     "vendor": "JustCoolThings",
-    "image": "",
+    "image": ".../client/src/icons/toy-blocks.png",
     "quantityInStock": 880
   },
   {
@@ -176,7 +176,7 @@
     "category": "Beauty",
     "vendor": "Delilah Beauty",
     "price": 29.99,
-    "image": "",
+    "image": "(../)",
     "quantityInStock": 1400
   },
   {

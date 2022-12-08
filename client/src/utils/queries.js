@@ -97,3 +97,12 @@ export const QUERY_ALL_PRODUCTS = gql`
     }
   }
 `;
+
+export const QUERY_GET_IMAGE = gql
+`  query Query($productId: ID!) {
+    product(productId: $productId) {
+      image
+    }
+  }
+}
+`;
