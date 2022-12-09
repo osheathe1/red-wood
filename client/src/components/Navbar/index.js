@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Navbar.css";
 import SearchBar from "../SearchBar/searchBar";
-import Cart from "../Cart"
 // import ProductData from '../../../../server/seeders/productSeeds.json'
 function Navbar() {
   return (
