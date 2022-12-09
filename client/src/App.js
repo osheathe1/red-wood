@@ -15,7 +15,7 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import { Product } from './components/Product';
 import AboutUs from './pages/AboutUs';
-import Cart from './components/Cart';
+import Cart from './components/CartItem';
 import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
