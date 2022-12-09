@@ -103,6 +103,9 @@ query Products($productId: ID!) {
     createdAt
     reviews {
       _id
+      username
+      text
+      stars
     }
   }
 }

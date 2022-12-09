@@ -66,8 +66,8 @@ function AboutUs() {
             <div class="container">
               <h2>Leone Varando</h2>
               <p class="title">Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
+              <p>Hello! I worked primarily on the Front-End on this project.<br></br><br></br>If you like my work, please feel free to contact me through my email just below to connect!</p>
+              <p>lvarando@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
               </p>
