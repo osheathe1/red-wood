@@ -9,9 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import './styles/Cart.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 

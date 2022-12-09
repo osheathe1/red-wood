@@ -7,7 +7,8 @@ const resolvers = {
     users: async () => { // will we need to use this?
       return User.find().populate('reviews');
     },
-    user: async (parent, { username }) => { // will we need to use this?
+    user: async (parent, { username }) => {
+      console.log(username) // will we need to use this?
       return User.findOne({ username }).populate('reviews');
     },
 
@@ -33,7 +34,7 @@ const resolvers = {
     review: async (parent, { reviewId }) => {
       return Review.findOne({ _id: reviewId }).populate('product');
     },
-   
+  
     // get all vendors
     vendors: async () => {
       return Vendor.find().populate('products');
@@ -45,7 +46,8 @@ const resolvers = {
     // user profile
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('reviews', 'favorites');
+        console.log(context)
+        return User.findOne({ _id: context.user._id }).populate('reviews');
       }
       throw new AuthenticationError('You need to be logged in!');
     },

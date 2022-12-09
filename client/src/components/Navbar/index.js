@@ -12,7 +12,6 @@ function Navbar() {
         <SearchBar placeholder='Search' />
         <Link to="/login"> Login </Link>
         <Link to="/cart"> Cart </Link>
-        
       </div>
     </div>
   );
