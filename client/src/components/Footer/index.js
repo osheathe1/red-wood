@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -16,16 +17,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the Tech Thoughts team.
+          <Link to='/aboutus' > About Us </Link>
         </h4>
       </div>
     </footer>
