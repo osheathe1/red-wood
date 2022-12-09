@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   height: 1000px;
-  /* width: 80%; */
   background-color: var(--whiteGray);
   width: 70%;
   margin-top: 5rem;
@@ -155,17 +154,156 @@
   content: "Sure!";
 }
 
+@media screen and (max-width: 1910px) {
+  .product-container {
+    width: 80%;
+    height: 700px;
+  }
+
+  .left-sidebar {
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-title {
+    margin: 50px;
+  }
+
+  .product-image {
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .right-side {
+    width: 40%;
+  }
+
+  #product-description {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  #vendor {
+    text-align: center;
+  }
+
+  #review-container {
+    width: 80%;
+  }
+
+  #btn-container {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 820px) {
   .product-container {
     flex-direction: column;
+    width: 85%;
+    padding: 0;
+    justify-content: space-around;
+    height: 1000px;
   }
 
   .left-sidebar {
     border-right: none;
     border-bottom: 3px solid var(--lightGray);
+    margin: 0;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-title {
+    margin: 50px;
+  }
+
+  .product-image {
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
   }
 
   .right-side {
+    width: 80%;
+  }
 
+  #product-description {
+    width: 100%;
+    font-size: 25px;
+  }
+
+  #vendor {
+    text-align: center;
+  }
+
+  #review-container {
+    width: 80%;
+  }
+
+  #btn-container {
+    font-size: 25px;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .product-container {
+    width: 95%;
+  }
+
+  .left-sidebar {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-title {
+    margin: 30px;
+  }
+  .product-image {
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #product-description {
+    font-size: 20px;
+  }
+
+  #review-container {
+    width: 100%;
+  }
+
+  #btn-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .product-container {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  .left-sidebar {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #review-container {
+    width: 100%;
+  }
+
+  #btn-container {
+    width: 100%;
   }
 }
