@@ -15,6 +15,8 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer';
 import { Product } from './components/Product';
 import AboutUs from './pages/AboutUs';
+import Cart from './components/Cart';
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,7 +45,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+      
       <Navbar />
+      
         <div className="flex-column justify-flex-start min-100-vh">
           <div className="container">
             <Routes>
