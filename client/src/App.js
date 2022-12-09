@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import { Product } from './components/Product';
 import AboutUs from './pages/AboutUs';
 import Cart from './components/Cart';
+import { StoreProvider } from './utils/GlobalState';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,7 +46,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-      
+
+      <StoreProvider>
+
       <Navbar />
       
         <div className="flex-column justify-flex-start min-100-vh">
@@ -79,10 +82,15 @@ function App() {
                 path="/aboutus" 
                 element={<AboutUs />}
               />
+              <Route 
+                path="/cart" 
+                element={<Cart />}
+              />
             </Routes>
           </div>
           <Footer />
         </div>
+        </StoreProvider>
       </Router>
     </ApolloProvider>
   );
