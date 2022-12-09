@@ -24,7 +24,12 @@ const resolvers = {
       return Product.find({ category }).populate('reviews');
     },
 
-    // get review by id and populate product
+    // get all reviews -- is this needed?
+    reviews: async () => {
+      return Review.find().populate('product');
+    },
+
+    // get review by id
     review: async (parent, { reviewId }) => {
       return Review.findOne({ _id: reviewId }).populate('product');
     },

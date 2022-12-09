@@ -52,6 +52,7 @@ const typeDefs = gql`
     vendor(vendorId: ID!): Vendor
     productsByCategory(category: String!): [Product]
     me: User
+    reviews: [Review]
     review(reviewId: ID!): Review
   }
 
