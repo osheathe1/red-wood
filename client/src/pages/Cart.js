@@ -21,7 +21,7 @@ const Cart = () => {
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
+        res?.redirectToCheckout({ sessionId: data.checkout.session });
       });
     }
   }, [data]);
@@ -43,24 +43,24 @@ const Cart = () => {
   //   dispatch({ type: TOGGLE_CART });
   // }
 
-  // function calculateTotal() {
-  //   let sum = 0;
-  //   state.cart.forEach((item) => {
-  //     sum += item.price * item.purchaseQuantity;
-  //   });
-  //   return sum.toFixed(2);
-  // }
+  function calculateTotal() {
+    let sum = 0;
+    state.cart?.forEach((item) => {
+      sum += item.price * item.purchaseQuantity;
+    });
+    return sum.toFixed(2);
+  }
 
   // When the submit checkout method is invoked, loop through each item in the cart
   // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
   function submitCheckout() {
     const productIds = [];
 
-    // state.cart.forEach((item) => {
-    //   for (let i = 0; i < item.purchaseQuantity; i++) {
-    //     productIds.push(item._id);
-    //   }
-    // });
+    state.cart?.forEach((item) => {
+      for (let i = 0; i < item.purchaseQuantity; i++) {
+        productIds.push(item._id);
+      }
+    });
 
     getCheckout({
       variables: { products: productIds },
