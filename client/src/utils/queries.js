@@ -15,6 +15,22 @@ export const QUERY_USER = gql`
   }
 `;
 
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      thoughts {
+        _id
+        thoughtText
+        thoughtAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
 export const QUERY_THOUGHTS = gql`
   query getThoughts {
     thoughts {
@@ -43,23 +59,56 @@ export const QUERY_SINGLE_THOUGHT = gql`
   }
 `;
 
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      thoughts {
-        _id
-        thoughtText
-        thoughtAuthor
-        createdAt
-      }
-    }
+export const QUERY_CHECKOUT = gql`
+query getCheckout($products: [ID]!) {
+  checkout(products: $products) {
+    session
   }
+}
 `;
 
-export const QUERY_PRODUCTS = gql`
+// ------------------------------
+// PRODUCT QUERIES
+// ------------------------------
+export const QUERY_ALL_PRODUCTS = gql`
+query Products {
+  products {
+    _id
+    name
+    description
+    price
+    quantityInStock
+    category
+    image
+    vendor
+    reviews {
+      _id
+    }
+  }
+}
+`;
+
+// Get product by ID
+export const QUERY_PRODUCT = gql`
+query Products($productId: ID!) { 
+  product(productId: $productId) {
+    _id
+    category
+    name
+    description
+    image
+    price
+    quantityInStock
+    vendor
+    createdAt
+    reviews {
+      _id
+    }
+  }
+}
+`;
+
+export const QUERY_PRODUCTS_BY_CATEGORY = gql`
   query getProducts($category: ID) {
     products(category: $category) {
       _id
@@ -75,33 +124,3 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
-      session
-    }
-  }
-`;
-
-export const QUERY_ALL_PRODUCTS = gql`
-  {
-    products {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-    }
-  }
-`;
-
-export const QUERY_GET_IMAGE = gql
-`  query Query($productId: ID!) {
-    product(productId: $productId) {
-      image
-    }
-  }
-`;
