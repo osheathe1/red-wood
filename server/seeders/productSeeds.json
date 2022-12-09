@@ -130,7 +130,7 @@
     "description": "",
     "price": 96100,
     "category": "Cars",
-    "vendor": "Monsterzilla",
+    "vendor": "Motorzilla",
     "image": "",
     "quantityInStock": 12
   },
@@ -139,7 +139,7 @@
     "description": "",
     "price": 74000,
     "category": "Cars",
-    "vendor": "Monsterzilla",
+    "vendor": "Motorzilla",
     "image": "",
     "quantityInStock": 10
   },
@@ -147,7 +147,7 @@
     "name": "2018 700 Z-LX",
     "description": "",
     "category": "Cars",
-    "vendor": "Monsterzilla",
+    "vendor": "Motorzilla",
     "price": 86000,
     "image": "",
     "quantityInStock": 30
