@@ -24,6 +24,11 @@ const resolvers = {
       return Product.find({ category }).populate('reviews');
     },
 
+    // get review by id and populate product
+    review: async (parent, { reviewId }) => {
+      return Review.findOne({ _id: reviewId }).populate('product');
+    },
+   
     // get all vendors
     vendors: async () => {
       return Vendor.find().populate('products');
