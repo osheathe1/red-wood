@@ -91,6 +91,11 @@
   font-size: 50px;
 }
 
+.disappear {
+  display: none;
+  transition: ease .125s;
+}
+
 @keyframes jumpInfiniteXL {
   0% {
     bottom: 0;
