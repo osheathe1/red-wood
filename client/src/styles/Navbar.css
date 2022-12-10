@@ -17,3 +17,12 @@
 .single-login-links {
     margin-right: 5px;
 }
+
+#search-text-input {
+    width: 23rem;
+    height: 2.5rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 5px 2px 20px #ccc;
+}
