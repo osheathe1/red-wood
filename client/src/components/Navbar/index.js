@@ -14,8 +14,9 @@ function Navbar() {
         <Link to="/categories"> Categories </Link>
         <SearchBar placeholder='Search' />
         {(!Auth.loggedIn()) ?
-          <Link to="/login"> Login </Link>
-          : <Link to="/me">Profile</Link>
+          <Link to="/login" className='single-login-link'> Login </Link>
+          : 
+            <Link to="/me" className='single-login-link'>Profile</Link>
         }
         <Link to="/cart"> Cart </Link>
       </div>
