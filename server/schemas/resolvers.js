@@ -4,6 +4,9 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    // ---------------------
+    // USER QUERIES
+    // ---------------------
     users: async () => { // will we need to use this?
       return User.find().populate('reviews');
     },
@@ -11,7 +14,18 @@ const resolvers = {
       console.log(username) // will we need to use this?
       return User.findOne({ username }).populate('reviews');
     },
+    // user profile
+    me: async (parent, args, context) => {
+      if (context.user) {
+        console.log(context)
+        return User.findOne({ _id: context.user._id }).populate('reviews');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
 
+    // ---------------------
+    // PRODUCT QUERIES
+    // ---------------------
     // get all products
     products: async () => {
       return Product.find().populate('reviews');
@@ -25,6 +39,9 @@ const resolvers = {
       return Product.find({ category }).populate('reviews');
     },
 
+    // ---------------------
+    // REVIEW QUERIES
+    // ---------------------
     // get all reviews -- is this needed?
     reviews: async () => {
       return Review.find().populate('product');
@@ -35,6 +52,9 @@ const resolvers = {
       return Review.findOne({ _id: reviewId }).populate('product');
     },
   
+    // ---------------------
+    // VENDOR QUERIES
+    // ---------------------
     // get all vendors
     vendors: async () => {
       return Vendor.find().populate('products');
@@ -43,17 +63,12 @@ const resolvers = {
       return Vendor.findOne({ _id: vendorId }).populate('products');
     },
 
-    // user profile
-    me: async (parent, args, context) => {
-      if (context.user) {
-        console.log(context)
-        return User.findOne({ _id: context.user._id }).populate('reviews');
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
   },
 
   Mutation: {
+    // ---------------------
+    // USER MUTATIONS
+    // ---------------------
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
@@ -78,12 +93,37 @@ const resolvers = {
       return { token, user };
     },
 
+    // ---------------------
+    // PRODUCT MUTATIONS
+    // ---------------------
     // add new product
     addProduct: async (parent, { name, description, price, category, quantityInStock, image, vendor }) => {
       const product = await Product.create({ name, description, price, category, quantityInStock, image, vendor });
       return product;
     },
 
+    // update product
+    updateProduct: async (parent, { productId, name, description, price, category, quantityInStock, image, vendor }) => {
+      const product = await Product.findOneAndUpdate(
+        { _id: productId },
+        { $set: { name, description, price, category, quantityInStock, image, vendor } },
+        { new: true }
+      );
+      return product;
+    },
+
+    // delete product
+    deleteProduct: async (parent, { productId }) => {
+      const product = await Product.deleteOne(
+        { _id: productId }
+      );
+
+      return product;
+    },
+
+    // ---------------------
+    // REVIEW MUTATIONS
+    // ---------------------
     // add review to product
     addReview: async (parent, { productId, reviewText, stars }, context) => {
       if (context.user) {
@@ -128,6 +168,9 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
+    // ---------------------
+    // USER FAVORITES MUTATIONS
+    // ---------------------
     // add product to favorites
     addFavorite: async (parent, { productId }, context) => {
       if (context.user) {
@@ -156,6 +199,9 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
+    // ---------------------
+    // VENDOR MUTATIONS
+    // ---------------------
     // add new vendor
 
     // add product to vendor
@@ -167,9 +213,8 @@ const resolvers = {
       ).populate('products');
 
       return updatedVendor;
-    }
-
-
+    },
+    
   },
 };
 

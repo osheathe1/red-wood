@@ -1,8 +1,5 @@
 const { gql } = require('apollo-server-express');
 
-
-// favorites: [Product]!
-
 const typeDefs = gql`
   type User {
     _id: ID
@@ -10,6 +7,7 @@ const typeDefs = gql`
     email: String
     password: String
     reviews: [Review]!
+    favorites: [Product]!
   }
 
   type Product {
@@ -48,23 +46,24 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(username: String!): User
+    me: User
     products: [Product]
     product(productId: ID!): Product
-    vendors: [Vendor]
-    vendor(vendorId: ID!): Vendor
     productsByCategory(category: String!): [Product]
-    me: User
     reviews: [Review]
     review(reviewId: ID!): Review
+    vendors: [Vendor]
+    vendor(vendorId: ID!): Vendor
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addProduct(name: String!, description: String!, price: Float!, category: String!, quantityInStock: Int!, image: String!, vendor: String!): Product
+    updateProduct(productId: ID!, name: String!, description: String!, price: Float!, category: String!, quantityInStock: Int!, image: String!, vendor: String!): Product
+    deleteProduct(productId: ID!): Product
     addReview(text: String!, stars: Int!, productId: ID!): Product
     removeReview(reviewId: ID!): Product
-    addProduct(name: String!, description: String!, price: Float!, category: String!, quantityInStock: Int!, image: String!, vendor: String!): Product
-    addVendor(name: String!): Vendor
     addFavorite(productId: ID!): User
     removeFavorite(productId: ID!): User
     vendorProductAdd(productId: ID!, vendorId: ID!): Vendor
