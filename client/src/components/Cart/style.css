@@ -5,15 +5,18 @@
     min-width: 20%;
     max-width: 30%;
     max-height: 60%;
-    background-color: var(--light);
+    background-color: white;
+    color:black;
     overflow: auto;
     padding: .5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
     border-bottom-left-radius: .5rem;
+    z-index: 9999;
   }
   
   .cart h2 {
     font-size: 1.5rem;
+    color:black;
     border-bottom: 1px solid var(--dark);
     padding-bottom: .5rem;
     margin: 1rem 0;
@@ -29,6 +32,7 @@
   
   .cart .close:hover {
     text-decoration: underline;
+    color:black;
   }
   
   .cart-closed {
@@ -36,12 +40,14 @@
     top: 2%;
     right: 1%;
     font-size: 2rem;
+    color:black;
     cursor: pointer;
     background-color: var(--secondary);
     border-radius: 50%;
     padding: .25rem;
     width: 50px;
     height: 50px;
+    z-index: 9999;
   }
   
   .cart-closed:hover {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/Navbar.css";
 import SearchBar from "../SearchBar/searchBar";
 import Auth from "../../utils/auth";
+import Cart from "../Cart";
 // import ProductData from '../../../../server/seeders/productSeeds.json'
 
 
@@ -19,6 +20,7 @@ function Navbar() {
             <Link to="/me" className='single-login-link'>Profile</Link>
         }
         <Link to="/cart"> Cart </Link>
+        <Cart />
       </div>
     </div>
   );
