@@ -1,3 +1,5 @@
+@import './styles/css-variables.css';
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1013,12 +1015,12 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: var(--medGray);
   color: #d9e9e8;
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: var(--brown);
 }
 
 .btn.btn-danger {
@@ -1087,12 +1089,15 @@ a:hover {
 .card {
   border: 1px solid #1a1a1a;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .card .card-header {
   padding: 0.375rem;
-  background-color: #2d3e50;
+  background-color: var(--brown);
   color: #d9e9e8;
+  border-top-left-radius: 8.5px;
+  border-top-right-radius: 8.5px;
 }
 
 .card .card-body {
