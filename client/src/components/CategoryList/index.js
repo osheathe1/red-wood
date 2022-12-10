@@ -32,10 +32,10 @@ const categories = [
 export const CategoryList = () => {
   return (
     <div className='category-list'>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <section className='category-card' style={{
           backgroundImage: `url("${category.url}")`
-        }}>
+        }} key={index}>
           <p className='category-title'>{category.name}</p>
         </section>
       ))}

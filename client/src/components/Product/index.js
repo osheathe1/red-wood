@@ -118,8 +118,7 @@ export const Product = (props) => {
 
           {product.reviews ? product.reviews.map((review, index) => (
             <div key={index}>
-              <label className='review-author'>{review.username}
-              </label>
+              <label className='review-author'>{review.username}</label>
               <span className='rate'>
                   <input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="text">5 stars</label>
