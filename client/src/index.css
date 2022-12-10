@@ -1329,6 +1329,16 @@ label form [type='radio'] {
   max-width: 100%;
 }
 
+.footer-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-btn {
+  cursor: pointer;
+}
+
 /* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-auto {

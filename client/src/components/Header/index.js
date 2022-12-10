@@ -19,7 +19,7 @@ const Header = () => {
           </Link>
           {/* <p className="m-0 custom-sub-title">Biggest wood in town!</p> */}
         </div>
-        <div>
+        {/* <div>
           {Auth.loggedIn() ? (
             <>
               <Link className="btn btn-lg btn-info m-2" to="/me">
@@ -39,7 +39,7 @@ const Header = () => {
               </Link>
             </>
           )}
-        </div>
+        </div> */}
       </div>
       <div className='guiding-arrow'><span>&#8595;</span></div>
     </header>
