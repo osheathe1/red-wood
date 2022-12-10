@@ -17,7 +17,9 @@ import { Product } from './components/Product';
 import AboutUs from './pages/AboutUs';
 import Cart from './components/Cart';
 import { StoreProvider } from './utils/GlobalState';
-
+import Categories from './pages/Categories';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -85,6 +87,10 @@ function App() {
               <Route 
                 path="/cart" 
                 element={<Cart />}
+              />
+              <Route 
+                path="/categories" 
+                element={<Categories />}
               />
             </Routes>
           </div>

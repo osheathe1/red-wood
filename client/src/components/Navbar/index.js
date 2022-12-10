@@ -19,7 +19,7 @@ function Navbar() {
           : 
             <Link to="/me" className='single-login-link'>Profile</Link>
         }
-        <Link to="/cart"> Cart </Link>
+        <Link to="/cart"/> 
         <Cart />
       </div>
     </div>

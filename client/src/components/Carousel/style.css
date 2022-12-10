@@ -1,0 +1,17 @@
+.parent img{
+    background-color: rgba(112, 70, 61, 0.7);
+    background-repeat: none;
+    background-size: cover;
+    min-height: 50vh;
+    color: #fff;
+    border-radius: 20px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    box-shadow: 10px 10px 20px #5f5f5f;
+    margin-left: 45px;
+}
