@@ -55,67 +55,6 @@ export const Product = (props) => {
       <h1 id='review-header'>Reviews</h1>
       <section id='review-container'>
         <ul id='reviews'>
-          {/* <label className='review-author'>Lvarando | Dec 2022
-          </label>
-          <span className='rate'>
-                <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </span>
-          <li className='single-review'>My family LOVES this white tee. It has been a home to us for many years and will be passed down to my children! 10 out of 10, would recommend.</li>
-
-          <label className='review-author'>Jaeal | July 2022
-          </label>
-          <span className='rate'><input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </span>
-          <li className='single-review'>10/10. Love!</li>
-
-          <label className='review-author'>ZschRo | Jan 2021
-          </label>
-          <span className='rate'><input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </span>
-          <li className='single-review'>Never had anything wider than this. Great Job!</li>
-
-          <label className='review-author'>JoFlor | Apr 2020
-          </label>
-          <div className='rate'><input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </div>
-          <li className='single-review'>Who knew basic and white would be so sought after!</li> */}
-
           {product.reviews ? product.reviews.map((review, index) => (
             <div key={index}>
               <label className='review-author'>{review.username}</label>
