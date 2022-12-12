@@ -1,13 +1,18 @@
 import { React } from 'react';
 import { useParams} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
+import { useStoreContext } from '../../utils/GlobalState';
 import { QUERY_PRODUCT } from '../../utils/queries';
-
+import { idbPromise } from '../../utils/helpers';
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 // import Auth from '../../utils/auth';
 
-export const Product = (props) => {
+export const Product = (item) => {
   let count = 0
+  const [state, dispatch] = useStoreContext();
+
+ 
+
 
   let { productId } = useParams()
 
@@ -36,6 +41,45 @@ export const Product = (props) => {
     
   }
 
+  const {
+    image,
+    name,
+    _id,
+    price,
+    quantity
+  } = item;
+  // const item = {
+  //   image,
+  //   name,
+  //   _id,
+  //   price,
+  //   quantity
+  // }
+
+  const { cart } = state
+
+
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
+  }
+
   return (
     <div id='main-product-container'>
       <section className='product-container'>
@@ -47,7 +91,8 @@ export const Product = (props) => {
         <div className='right-side'>
           <p id="product-description">{product.description}</p>
           <div id='btn-container'>
-            <button id='cart-btn' className='single-btn' onClick={cartAddHandler}>Add to cart!</button>
+            {/* <button id='cart-btn' className='single-btn' onClick={cartAddHandler}>Add to cart!</button> */}
+            <button onClick={addToCart}>Add to cart</button>
             <button id='review-btn' className='single-btn'>Reviews</button>
           </div>
         </div>
