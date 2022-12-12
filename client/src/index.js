@@ -5,6 +5,7 @@ import './styles/Navbar.css'
 import './styles/product.css'
 import './styles/homepage.css'
 import './styles/Cart.css'
+import './styles/profile.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/Cart.css';

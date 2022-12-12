@@ -6,8 +6,8 @@
     justify-content: space-around;
     color: white;
     text-decoration: none;
-    
 }
+
 a{
     color:rgba(112, 70, 61, 0.7);
     text-decoration: none;
@@ -181,3 +181,4 @@ a{
       display: flex;
     }
   }
+
