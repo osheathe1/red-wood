@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useParams, Link} from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -52,17 +52,17 @@ const Profile = () => {
           <div className='recently-viewed-container'>
             <div className='recently-viewed-card'>
               <p>Item Name</p>
-              <a href='#'>View</a>
+              <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
             <div className='recently-viewed-card'>
               <p>Item Name</p>
-              <a href='#'>View</a>
+              <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
             <div className='recently-viewed-card'>
               <p>Item Name</p>
-              <a href='#'>View</a>
+              <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
             
@@ -76,17 +76,17 @@ const Profile = () => {
             <div className='recently-viewed-container'>
               <div className='recently-viewed-card'>
                 <p>Recommended Item</p>
-                <a href='#'>View</a>
+                <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
               <div className='recently-viewed-card'>
                 <p>Recommened Item</p>
-                <a href='#'>View</a>
+                <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
               <div className='recently-viewed-card'>
                 <p>Recommended Item</p>
-                <a href='#'>View</a>
+                <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
               
