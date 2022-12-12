@@ -1,15 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/Navbar.css";
 import SearchBar from "../SearchBar/searchBar";
 import Auth from "../../utils/auth";
 import Cart from "../Cart";
 // import ProductData from '../../../../server/seeders/productSeeds.json'
-
+import ReorderIcon from "@mui/icons-material/Reorder";
 
 function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
+
   return (
-    <div className="nav">
+    <div className="nav" id={expandNavbar ? "open" : "close"}>
+    <div className="toggleButton">
+      <button
+        onClick={() => {
+          setExpandNavbar((prev) => !prev);
+        }}
+      >
+        <ReorderIcon />
+      </button>
+      </div>
       <div className="links">
         <Link to="/"> Home </Link>
         <Link to="/categories"> Categories </Link>
