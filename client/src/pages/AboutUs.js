@@ -52,7 +52,7 @@ function AboutUs() {
             <div class="container">
               <h2>Zach Schroeder</h2>
               <p class="title">Designer</p>
-              <p>I worked on Front-End design and functionality of Redwood!</p>
+              <p>I worked on the Front-End design and functionality of Redwood!</p>
               <p>zschroeder34@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
