@@ -1,7 +1,5 @@
 @import './css-variables.css';
 
-.custom-profile-section {
-}
 
 .recently-viewed-label {
   font-size: 30px;
@@ -10,6 +8,7 @@
 
 .recently-viewed-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
