@@ -7,7 +7,7 @@ import { idbPromise } from '../../utils/helpers';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 // import Auth from '../../utils/auth';
 
-export const Product = (props) => {
+export const Product = (item) => {
   let count = 0
   const [state, dispatch] = useStoreContext();
 
@@ -25,21 +25,21 @@ export const Product = (props) => {
 
   console.log(product)
 
-  // const cartAddHandler = () => {
-  //   let cartBtn = document.querySelector('#cart-btn')
+  const cartAddHandler = () => {
+    let cartBtn = document.querySelector('#cart-btn')
 
-  //   cartBtn.textContent = 'Item Added!'
-  //   count++
+    cartBtn.textContent = 'Item Added!'
+    count++
 
-  //   if (count % 2 !== 0){
-  //     setTimeout(() => {
-  //       cartBtn.textContent = 'Already in cart'
-  //     }, 2000)
-  //   } else {
-  //     cartBtn.textContent = 'Add to cart!'
-  //   }
+    if (count % 2 !== 0){
+      setTimeout(() => {
+        cartBtn.textContent = 'Already in cart'
+      }, 2000)
+    } else {
+      cartBtn.textContent = 'Add to cart!'
+    }
     
-  // }
+  }
 
   const {
     image,
@@ -48,13 +48,13 @@ export const Product = (props) => {
     price,
     quantity
   } = item;
-  const item = {
-    image,
-    name,
-    _id,
-    price,
-    quantity
-  }
+  // const item = {
+  //   image,
+  //   name,
+  //   _id,
+  //   price,
+  //   quantity
+  // }
 
   const { cart } = state
 
