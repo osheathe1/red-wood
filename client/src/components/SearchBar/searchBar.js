@@ -6,12 +6,13 @@ import CloseIcon from "@mui/icons-material/Close";
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
+  console.log(data)
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+      return value.name.includes(searchWord);
     });
 
     if (searchWord === "") {
@@ -47,8 +48,8 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="dataItem" href={value.link}>
-                <p>{value.title} </p>
+              <a className="dataItem" href={value._id}>
+                <p>{value.name} </p>
               </a>
             );
           })}
