@@ -8,6 +8,12 @@
     text-decoration: none;
     
 }
+a{
+    color:rgba(112, 70, 61, 0.7);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
 
 .nav {
     width: 100%;
@@ -25,4 +31,14 @@
     border-radius: 10px;
     padding-left: 10px;
     box-shadow: 5px 2px 20px #ccc;
+}
+.searchIcon {
+    height: 2.5rem;
+    border: 1px solid;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 5px 2px 20px #ccc;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(112, 70, 61, 0.7); ;
 }
