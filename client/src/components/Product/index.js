@@ -1,10 +1,10 @@
 import { React } from 'react';
-import { Link, useParams} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import { QUERY_PRODUCT } from '../../utils/queries';
 
-import Auth from '../../utils/auth';
+// import Auth from '../../utils/auth';
 
 export const Product = (props) => {
   let count = 0
@@ -56,21 +56,24 @@ export const Product = (props) => {
       <section id='review-container'>
         <ul id='reviews'>
           {product.reviews ? product.reviews.map((review, index) => (
-            <div key={index}>
-              <label className='review-author'>{review.username}</label>
-              <span className='rate'>
-                  <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                  <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                  <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                  <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                  <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-              </span>
+            <div className='review-container' key={index}>
+              <div className='stars-and-authors'>
+                <label className='review-author'>{review.username}</label>
+                <span className='rate'>
+                    <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </span>
+              </div>
               <li className='single-review'>{review.text}</li>
+              <div id='review-divider'></div>
             </div>
           )) : null}
         </ul>
