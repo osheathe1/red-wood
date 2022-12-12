@@ -1,5 +1,8 @@
 const { gql } = require('apollo-server-express');
 
+
+// favorites: [Product]!
+
 const typeDefs = gql`
   type User {
     _id: ID
@@ -7,7 +10,6 @@ const typeDefs = gql`
     email: String
     password: String
     reviews: [Review]!
-    favorites: [Product]!
   }
 
   type Product {
