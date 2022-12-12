@@ -1,14 +1,17 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
 
 export const HeroCard = (props) => {
-  const { productId } = useParams()
 
-  let productUrl = `/product/${productId}`
+  // pull random product from props.products
+  const randomProduct = props.products[Math.floor(Math.random() * props.products.length)];
+  // console.log(randomProduct)
+
+  // const productId = '60f1b0f1b3b1a8b0b0c1c1c1'
+  let productUrl = `/product/${randomProduct._id}`
 
   return (
     <div className='hero-card-container'>
-      <p className='hero-card-title'>White Tee</p>
+      <p className='hero-card-title'>{randomProduct.name}</p>
       <a className='hero-card-link' href={productUrl} alt='hero-link'>Buy Now!</a>
     </div>
   )
