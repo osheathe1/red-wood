@@ -13,7 +13,7 @@ function Navbar() {
       <div className="links">
         <Link to="/"> Home </Link>
         <Link to="/categories"> Categories </Link>
-        <SearchBar placeholder='Search' />
+        <SearchBar placeholder="Enter a Product Name..." data />
         {(!Auth.loggedIn()) ?
           <Link to="/login" className='single-login-link'> Login </Link>
           : 
