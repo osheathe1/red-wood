@@ -21,9 +21,9 @@ function AboutUs() {
             <img src={Jay} alt="jay" width={100} />
             <div class="container">
               <h2>Jamionn Fletcher</h2>
-              <p class="title">CEO & Founder</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>jane@example.com</p>
+              <p class="title">Backend Developer</p>
+              <p>I worked on the payment and some backend issues.</p>
+              <p>jamionnf@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
               </p>
