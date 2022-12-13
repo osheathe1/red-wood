@@ -79,9 +79,9 @@ function AboutUs() {
           <img src={Matt} alt="zach" width={100}  />
             <div class="container">
               <h2>Matt Thomsen</h2>
-              <p class="title">Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
+              <p class="title">Backend Developer</p>
+              <p>I worked on the backend using MongoDB and GraphQL.</p>
+              <p>matthewthomsen99@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
               </p>
