@@ -80,15 +80,15 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
-  background-image: url(https://cdn.discordapp.com/attachments/1047988391440027748/1050143955746041916/white_tshirt.jpg);
+  background-size: auto;
   background-repeat: none;
-  background-size: cover;
   margin-bottom: 20px;
   box-shadow: 10px 10px 20px #5f5f5f;
 }
 
 .hero-card-title {
   font-size: 50px;
+  color: var(--darkRedwood)
 }
 
 .disappear {

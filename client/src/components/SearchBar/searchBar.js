@@ -47,8 +47,10 @@ function SearchBar({ placeholder, data }) {
       {filteredData.length !== 0 && (
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
+
+            let searchUrl = `/product/${value._id}`
             return (
-              <a className="dataItem" href={value._id}>
+              <a className="dataItem" href={searchUrl}>
                 <p>{value.name} </p>
               </a>
             );

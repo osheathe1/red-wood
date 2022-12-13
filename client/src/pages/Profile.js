@@ -51,17 +51,17 @@ const Profile = () => {
           <p className='recently-viewed-label'>Continue shopping: </p>
           <div className='recently-viewed-container'>
             <div className='recently-viewed-card'>
-              <p>Item Name</p>
+              <p>Afterburner Car Set</p>
               <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
             <div className='recently-viewed-card'>
-              <p>Item Name</p>
+              <p>Glactatron Defenders 4-Pack</p>
               <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
             <div className='recently-viewed-card'>
-              <p>Item Name</p>
+              <p>Darbie Dream Home</p>
               <a href='https://www.google.com'>View</a>
               {/* <Link >View now!</Link> */}
             </div>
@@ -75,17 +75,17 @@ const Profile = () => {
             <p className='recently-viewed-label'>What about this? </p>
             <div className='recently-viewed-container'>
               <div className='recently-viewed-card'>
-                <p>Recommended Item</p>
+                <p>SpyFiction: The Espionage Boardgame</p>
                 <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
               <div className='recently-viewed-card'>
-                <p>Recommened Item</p>
+                <p>2020 Silver 800</p>
                 <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
               <div className='recently-viewed-card'>
-                <p>Recommended Item</p>
+                <p>Dynamo Off Road</p>
                 <a href='https://www.google.com'>View</a>
                 {/* <Link >View now!</Link> */}
               </div>
