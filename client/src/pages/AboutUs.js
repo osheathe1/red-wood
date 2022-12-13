@@ -36,9 +36,9 @@ function AboutUs() {
           <img src={Josh} alt="jay" width={100} height={100}/>
             <div class="container">
               <h2>Joshua Flores</h2>
-              <p class="title">Art Director</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>mike@example.com</p>
+              <p class="title">Developer</p>
+              <p>I worked on functionality and some back-end!</p>
+              <p>joshuafloresjjf@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
               </p>
