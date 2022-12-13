@@ -22,18 +22,18 @@ export const Product = (item) => {
   let cartBtn = "Add to Cart";
   console.log(product);
 
-  const cartAddHandler = () => {
-    cartBtn = "Item Added!";
-    count++;
+  // const cartAddHandler = () => {
+  //   cartBtn = "Item Added!";
+  //   count++;
 
-    if (count % 2 !== 0) {
-      setTimeout(() => {
-        cartBtn = "Already in cart";
-      }, 2000);
-    } else {
-      cartBtn = "Add to cart!";
-    }
-  };
+  //   if (count % 2 !== 0) {
+  //     setTimeout(() => {
+  //       cartBtn = "Already in cart";
+  //     }, 2000);
+  //   } else {
+  //     cartBtn = "Add to cart!";
+  //   }
+  // };
 
   const { image, name, _id, price, quantity } = item;
   // const item = {
