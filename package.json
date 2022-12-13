@@ -21,4 +21,12 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   }
+  {
+    "name": "redwood-app",
+    "description": "a really cool app",
+    "version": "v16.18.0",
+    "engines": {
+      "node": "18.x"
+    }
+  }
 }
