@@ -7,7 +7,7 @@ import { idbPromise } from "../../utils/helpers";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 // import Auth from '../../utils/auth';
 
-export const Product = () => {
+export const Product = (item) => {
   let count = 0;
   const [state, dispatch] = useStoreContext();
 
