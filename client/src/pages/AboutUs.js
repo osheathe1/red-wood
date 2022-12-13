@@ -90,12 +90,12 @@ function AboutUs() {
         </div>
         <div class="column">
           <div class="card">
-          <img src={Jacob} alt="zach" width={100}  />
+          <img src={Jacob} alt="jake" width={100}  />
             <div class="container">
               <h2>Jacob Neal</h2>
               <p class="title">Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
+              <p>My name is Jacob. I worked primarily in databases and backend work. <br></br><br></br> This was an exciting and fulfilling project! Please feel free to contact me below</p>
+              <p>ziggaton@gmail.com</p>
               <p>
                 <button class="button">Contact</button>
               </p>

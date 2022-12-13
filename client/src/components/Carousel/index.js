@@ -3,22 +3,31 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import ProductItem from "./productimage";
+
+
+
+
+
 export default class MultipleItems extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 3
     };
     return (
       <div className="parent">
         <h2> Toys </h2>
         <Slider {...settings}>
+
+
+          <ProductItem/>
             
-          <div>
+          {/* <div>
           <Link to="/product/undefined"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt='yas' width={500}/></Link>
           </div>
           <div>
@@ -44,10 +53,10 @@ export default class MultipleItems extends Component {
           </div>
           <div>
           <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt='yas' width={500}/>
-          </div>
+          </div> */}
         </Slider>
         <pre></pre>
-        <div>
+        {/* <div>
         <h2> Gifts </h2>
         <Slider {...settings}>
           <div>
@@ -78,9 +87,9 @@ export default class MultipleItems extends Component {
           <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt='yas' width={500}/>
           </div>
         </Slider>
-      </div>
+      </div> */}
       <pre></pre>
-        <div>
+        {/* <div>
         <h2> Tech </h2>
         <Slider {...settings}>
           <div>
@@ -144,7 +153,7 @@ export default class MultipleItems extends Component {
           <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt='yas' width={500}/>
           </div>
         </Slider>
-      </div>
+      </div> */}
       <pre></pre>
         <div>
         <h2> Auto </h2>
