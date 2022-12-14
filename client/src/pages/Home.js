@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../components/Header';
 import { CategoryList } from '../components/CategoryList';
-import { HeroCard } from '../components/HeroCard';
+// import { HeroCard } from '../components/HeroCard';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../utils/queries';
 
@@ -22,7 +22,7 @@ const Home = () => {
     <main>
       
       <Header />
-      <HeroCard products={products}/>
+      {/* <HeroCard products={products}/> */}
       
       <div className="flex-row justify-center custom-list-container">
         <div
